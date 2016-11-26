@@ -8,7 +8,7 @@
 
 
 // *************************************************************************************************
-// # MARK: Pbulic Interface
+// # MARK: Private Interface
 
 
 @interface DetailViewController ()
