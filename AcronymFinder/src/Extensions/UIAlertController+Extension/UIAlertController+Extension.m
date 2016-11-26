@@ -31,7 +31,6 @@
                          style:UIAlertActionStyleDefault
                          handler:^(UIAlertAction * action) {
                              [alert dismissViewControllerAnimated:YES completion:nil];
-                             
                          }];
     [alert addAction:ok];
     [viewController presentViewController:alert animated:YES completion:nil];
