@@ -9,6 +9,7 @@
 #import "DetailViewController.h"
 #import "FullFormModel.h"
 #import "MBProgressHUD+Extension.h"
+#import "UIAlertController+Extension.h"
 
 
 // *************************************************************************************************
@@ -122,6 +123,8 @@
             NSLog(@"errors: %@", errors);
             [MBProgressHUD hideWaitIndicator:self.view];
             [self._searchBar setUserInteractionEnabled:YES];
+            [self _resetTableView];
+            [UIAlertController showAlertFor:self];
     }];
 }
 

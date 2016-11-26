@@ -1,0 +1,42 @@
+// *************************************************************************************************
+// # MARK: Imports
+
+
+#import "UIAlertController+Extension.h"
+
+
+// *************************************************************************************************
+// # MARK: Constants
+
+
+#define alertText NSLocalizedString(@"Service is not available!", nil)
+#define titleText NSLocalizedString(@"Info", nil)
+
+
+// *************************************************************************************************
+// # MARK: Implementation
+
+
+@implementation UIAlertController (Extension)
+
+
++ (void)showAlertFor:(UIViewController *)viewController {
+    UIAlertController * alert=   [UIAlertController
+                                  alertControllerWithTitle:titleText
+                                  message:alertText
+                                  preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction* ok = [UIAlertAction
+                         actionWithTitle:@"OK"
+                         style:UIAlertActionStyleDefault
+                         handler:^(UIAlertAction * action)
+                         {
+                             [alert dismissViewControllerAnimated:YES completion:nil];
+                             
+                         }];
+    
+    [alert addAction:ok];
+    [viewController presentViewController:alert animated:YES completion:nil];
+}
+
+
+@end
