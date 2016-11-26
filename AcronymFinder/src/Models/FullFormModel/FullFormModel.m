@@ -13,7 +13,7 @@
 
 
 // *************************************************************************************************
-// # MARK: Pbulic Methods
+// # MARK: Initialization
 
 
 - (instancetype)initWithDictionary:(NSDictionary *)dict {
@@ -32,6 +32,10 @@
 }
 
 
+// *************************************************************************************************
+// # MARK: Pbulic Methods
+
+
 - (NSString *)getDetailDescription {
     NSString *detailString
         = [NSString stringWithFormat:@"Frequency: %@ \t Since : %@",
@@ -39,5 +43,6 @@
     
     return detailString;
 }
+
 
 @end

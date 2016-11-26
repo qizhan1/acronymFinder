@@ -16,11 +16,17 @@
 
 
 // *************************************************************************************************
+// # MARK: Initialization
+
+
+- (instancetype)initWithDictionary:(NSDictionary *)dict;
+
+
+// *************************************************************************************************
 // # MARK: Pbulic Interfaces
 
 
 - (NSString *)getDetailDescription;
-- (instancetype)initWithDictionary:(NSDictionary *)dict;
 
 
 @end
