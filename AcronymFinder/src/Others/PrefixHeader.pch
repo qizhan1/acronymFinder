@@ -1,0 +1,25 @@
+// *************************************************************************************************
+// # MARK: Import Conditionals
+
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+// *************************************************************************************************
+// # MARK: Standard Global Imports
+
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+
+// *************************************************************************************************
+// # MARK: Imports
+
+
+#import "AFNetworking.h"
+#import "MBProgressHUD.h"
+
+
+#endif 

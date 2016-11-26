@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ykc-Lp-hLU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="JA7-qL-BFZ">
+            <objects>
+                <navigationController id="ykc-Lp-hLU" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3U2-Op-B3c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cRx-aX-YXf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xL3-Ja-adj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1353" y="54"/>
+        </scene>
+        <!--Acronym Finder-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="6Bw-OM-Rcy">
+                                <rect key="frame" x="0.0" y="60" width="375" height="607"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Kff-nZ-ijz"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="mwZ-9X-qkx">
+                                <rect key="frame" x="0.0" y="60" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Results Found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYw-zX-g7J">
+                                <rect key="frame" x="8" y="323.5" width="359" height="23.5"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mwZ-9X-qkx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0Fo-Ks-VG2"/>
+                            <constraint firstItem="PYw-zX-g7J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="6mo-i4-dXe"/>
+                            <constraint firstItem="mwZ-9X-qkx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="60" id="7Oh-XP-0LD"/>
+                            <constraint firstItem="PYw-zX-g7J" firstAttribute="centerX" secondItem="6Bw-OM-Rcy" secondAttribute="centerX" id="GBn-bU-OeF"/>
+                            <constraint firstItem="PYw-zX-g7J" firstAttribute="centerY" secondItem="6Bw-OM-Rcy" secondAttribute="centerY" constant="-28.25" id="US8-ZR-ZOc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6Bw-OM-Rcy" secondAttribute="bottom" id="VQz-nh-kTg"/>
+                            <constraint firstAttribute="trailing" secondItem="PYw-zX-g7J" secondAttribute="trailing" constant="8" id="cRg-73-xY0"/>
+                            <constraint firstAttribute="trailing" secondItem="6Bw-OM-Rcy" secondAttribute="trailing" id="iTN-bV-xH4"/>
+                            <constraint firstAttribute="trailing" secondItem="mwZ-9X-qkx" secondAttribute="trailing" id="kRw-7a-omY"/>
+                            <constraint firstItem="6Bw-OM-Rcy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oed-7D-aGL"/>
+                            <constraint firstItem="6Bw-OM-Rcy" firstAttribute="top" secondItem="mwZ-9X-qkx" secondAttribute="top" id="osh-KR-dum"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Acronym Finder" id="OMi-YC-oeU"/>
+                    <connections>
+                        <outlet property="_noReultsFoundLabel" destination="PYw-zX-g7J" id="7qy-GT-uCr"/>
+                        <outlet property="_resultsTableView" destination="6Bw-OM-Rcy" id="bCf-Ay-bLv"/>
+                        <outlet property="_searchBar" destination="mwZ-9X-qkx" id="M2U-G9-Uig"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-487.19999999999999" y="53.523238380809602"/>
+        </scene>
+    </scenes>
+</document>
