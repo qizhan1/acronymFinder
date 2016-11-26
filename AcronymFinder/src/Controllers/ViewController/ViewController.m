@@ -31,9 +31,9 @@
 // # MARK: IBOutlets
 
 
+@property (weak, nonatomic) IBOutlet UILabel *_noReultsFoundLabel;
 @property (weak, nonatomic) IBOutlet UITableView *_resultsTableView;
 @property (weak, nonatomic) IBOutlet UISearchBar *_searchBar;
-@property (weak, nonatomic) IBOutlet UILabel *_noReultsFoundLabel;
 
 
 // *************************************************************************************************
