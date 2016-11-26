@@ -74,9 +74,12 @@
              success(data);
          } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
              NSData *errorData = error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey];
-             id errorJson = [NSJSONSerialization JSONObjectWithData:errorData
-                                                            options:kNilOptions
-                                                              error:nil];
+             id errorJson = nil;
+             if (errorData) {
+                 errorJson = [NSJSONSerialization JSONObjectWithData:errorData
+                                                             options:kNilOptions
+                                                               error:nil];
+             }
              failure(errorJson);
          }];
 }
