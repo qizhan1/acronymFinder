@@ -21,13 +21,6 @@
 @interface DataProvider ()
 
 
-// *************************************************************************************************
-// # MARK: Private Properties
-
-
-//@property (strong, nonatomic) NSMutableArray *_results;
-
-
 @end
 
 
