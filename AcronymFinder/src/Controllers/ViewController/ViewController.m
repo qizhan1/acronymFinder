@@ -175,8 +175,7 @@
 // # MARK: Table View Delegate Methods
 
 
-- (void)tableView:(UITableView *)tableView
-didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     DetailViewController *viewController
         = [[DetailViewController alloc] initWithNibName:detailViewControllerNibName
                                                  bundle:nil];
