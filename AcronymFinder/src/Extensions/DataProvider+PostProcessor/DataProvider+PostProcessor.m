@@ -25,7 +25,6 @@
             NSMutableArray *fullDetails = [NSMutableArray new];
             for (NSDictionary *eachDetail in fullForm.details) {
                 FullFormModel *fullFormDetail = [[FullFormModel alloc] initWithDictionary:eachDetail];
-                fullForm.details = [NSMutableArray new];
                 [fullDetails addObject:fullFormDetail];
             }
             fullForm.details = fullDetails;
