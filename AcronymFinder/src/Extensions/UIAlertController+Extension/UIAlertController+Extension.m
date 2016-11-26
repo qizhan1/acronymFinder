@@ -10,6 +10,7 @@
 
 
 #define alertText NSLocalizedString(@"Service is not available!", nil)
+#define buttonTitle NSLocalizedString(@"OK", nil)
 #define titleText NSLocalizedString(@"Info", nil)
 
 
@@ -26,7 +27,7 @@
                                   message:alertText
                                   preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction* ok = [UIAlertAction
-                         actionWithTitle:@"OK"
+                         actionWithTitle:buttonTitle
                          style:UIAlertActionStyleDefault
                          handler:^(UIAlertAction * action)
                          {
