@@ -22,19 +22,17 @@
 
 
 + (void)showAlertFor:(UIViewController *)viewController {
-    UIAlertController * alert=   [UIAlertController
-                                  alertControllerWithTitle:titleText
-                                  message:alertText
-                                  preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController * alert = [UIAlertController
+                                   alertControllerWithTitle:titleText
+                                   message:alertText
+                                   preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction* ok = [UIAlertAction
                          actionWithTitle:buttonTitle
                          style:UIAlertActionStyleDefault
-                         handler:^(UIAlertAction * action)
-                         {
+                         handler:^(UIAlertAction * action) {
                              [alert dismissViewControllerAnimated:YES completion:nil];
                              
                          }];
-    
     [alert addAction:ok];
     [viewController presentViewController:alert animated:YES completion:nil];
 }
