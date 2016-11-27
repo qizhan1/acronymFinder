@@ -38,7 +38,7 @@
 
 - (NSString *)getDetailDescription {
     NSString *detailString
-        = [NSString stringWithFormat:@"Frequency: %@ \t Since : %@",
+        = [NSString stringWithFormat:@"Frequency: %@ \t Since: %@",
            self.frequency, self.since];
     
     return detailString;
