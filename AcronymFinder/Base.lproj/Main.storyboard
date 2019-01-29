@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ykc-Lp-hLU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ykc-Lp-hLU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,7 +15,7 @@
             <objects>
                 <navigationController id="ykc-Lp-hLU" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3U2-Op-B3c">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -29,27 +30,23 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="6Bw-OM-Rcy">
-                                <rect key="frame" x="0.0" y="60" width="375" height="607"/>
+                                <rect key="frame" x="0.0" y="141" width="375" height="526"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Kff-nZ-ijz"/>
                                 </connections>
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="mwZ-9X-qkx">
-                                <rect key="frame" x="0.0" y="60" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="85" width="375" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Results Found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYw-zX-g7J">
-                                <rect key="frame" x="8" y="323.5" width="359" height="23.5"/>
+                                <rect key="frame" x="107.5" y="364" width="160.5" height="23.5"/>
                                 <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -57,18 +54,19 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="mwZ-9X-qkx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0Fo-Ks-VG2"/>
-                            <constraint firstItem="PYw-zX-g7J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="6mo-i4-dXe"/>
-                            <constraint firstItem="mwZ-9X-qkx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="60" id="7Oh-XP-0LD"/>
+                            <constraint firstItem="mwZ-9X-qkx" firstAttribute="leading" secondItem="5X6-mb-39H" secondAttribute="leading" id="0Fo-Ks-VG2"/>
+                            <constraint firstItem="6Bw-OM-Rcy" firstAttribute="top" secondItem="mwZ-9X-qkx" secondAttribute="bottom" id="0H4-1P-hQd"/>
+                            <constraint firstItem="PYw-zX-g7J" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5X6-mb-39H" secondAttribute="leading" id="6mo-i4-dXe"/>
+                            <constraint firstItem="mwZ-9X-qkx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="85" id="7Oh-XP-0LD"/>
                             <constraint firstItem="PYw-zX-g7J" firstAttribute="centerX" secondItem="6Bw-OM-Rcy" secondAttribute="centerX" id="GBn-bU-OeF"/>
                             <constraint firstItem="PYw-zX-g7J" firstAttribute="centerY" secondItem="6Bw-OM-Rcy" secondAttribute="centerY" constant="-28.25" id="US8-ZR-ZOc"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6Bw-OM-Rcy" secondAttribute="bottom" id="VQz-nh-kTg"/>
-                            <constraint firstAttribute="trailing" secondItem="PYw-zX-g7J" secondAttribute="trailing" constant="8" id="cRg-73-xY0"/>
-                            <constraint firstAttribute="trailing" secondItem="6Bw-OM-Rcy" secondAttribute="trailing" id="iTN-bV-xH4"/>
-                            <constraint firstAttribute="trailing" secondItem="mwZ-9X-qkx" secondAttribute="trailing" id="kRw-7a-omY"/>
-                            <constraint firstItem="6Bw-OM-Rcy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oed-7D-aGL"/>
-                            <constraint firstItem="6Bw-OM-Rcy" firstAttribute="top" secondItem="mwZ-9X-qkx" secondAttribute="top" id="osh-KR-dum"/>
+                            <constraint firstItem="5X6-mb-39H" firstAttribute="bottom" secondItem="6Bw-OM-Rcy" secondAttribute="bottom" id="VQz-nh-kTg"/>
+                            <constraint firstItem="5X6-mb-39H" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="PYw-zX-g7J" secondAttribute="trailing" id="cRg-73-xY0"/>
+                            <constraint firstItem="5X6-mb-39H" firstAttribute="trailing" secondItem="6Bw-OM-Rcy" secondAttribute="trailing" id="iTN-bV-xH4"/>
+                            <constraint firstItem="5X6-mb-39H" firstAttribute="trailing" secondItem="mwZ-9X-qkx" secondAttribute="trailing" id="kRw-7a-omY"/>
+                            <constraint firstItem="6Bw-OM-Rcy" firstAttribute="leading" secondItem="5X6-mb-39H" secondAttribute="leading" id="oed-7D-aGL"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="5X6-mb-39H"/>
                     </view>
                     <navigationItem key="navigationItem" title="Acronym Finder" id="OMi-YC-oeU"/>
                     <connections>
